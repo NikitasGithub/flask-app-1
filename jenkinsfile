@@ -28,12 +28,5 @@ pipeline {
         }
     }
     
-    post {
-        always {
-            // Clean up Docker images and containers after the build
-            sh 'docker container prune -f'
-            sh 'docker image prune -f'
-        }
-    }
 }
 
